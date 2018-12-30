@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.johncarden.additionbraintrainer.MainActivity">
+
+    <Button
+        android:text="BEGIN!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/startButton"
+        android:textSize="60sp"
+        android:background="@android:color/holo_blue_bright"
+        android:visibility="visible"
+        android:onClick="startGame" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:id="@+id/headerLayout">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeRemaining"
+            android:layout_weight="1"
+            tools:text="30s"
+            android:textSize="30sp"
+            android:background="#00ffa6"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentProblem"
+            android:layout_weight="10"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <TextView
+            android:text="0/0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentScore"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:background="#00ffbf" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerLayout"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible">
+
+        <Button
+            android:text="00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer1"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:tag="1"
+            android:textSize="70sp"
+            android:padding="30dp"
+            android:background="@android:color/holo_red_light"
+            android:onClick="selectAnswer" />
+
+        <Button
+            android:text="00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer2"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:tag="2"
+            android:textSize="70sp"
+            android:padding="30dp"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="selectAnswer" />
+
+        <Button
+            android:text="00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer3"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:tag="3"
+            android:textSize="70sp"
+            android:padding="30dp"
+            android:background="@android:color/holo_purple"
+            android:onClick="selectAnswer" />
+
+        <Button
+            android:text="00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/answer4"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:tag="4"
+            android:textSize="70sp"
+            android:padding="30dp"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="selectAnswer" />
+
+    </GridLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerCheck"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
